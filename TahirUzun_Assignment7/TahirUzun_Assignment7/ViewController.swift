@@ -257,60 +257,72 @@ class ViewController: UIViewController {
     // ------------------------------------------------------------------
     // All the code below this mark is for Configuration
     // ------------------------------------------------------------------
+
+    // Configuration Variables:
+    var segmentIndex:Int = 0
+    var channelName:String = ""
     
-    @IBOutlet weak var labelTextField: UITextField!
-    @IBOutlet weak var configSegment: UISegmentedControl!
-    @IBOutlet weak var tvSegment: UISegmentedControl!
-    @IBOutlet weak var saveButoon: UIButton!
-    @IBOutlet weak var tvCurrChannelTextField: UILabel!
-    @IBOutlet weak var stepper: UIStepper!
-    @IBOutlet weak var configChannelLabel: UILabel!
+    // TV Variables:
     
-    @IBAction func configStepper(_ sender: UIStepper)
+    // ------------------------------------------------------------------
+    
+    // Configuration Outlets:
+    @IBOutlet weak var configSegmentOutlet: UISegmentedControl!
+    @IBOutlet weak var configSegmentTitle: UITextField!
+    @IBOutlet weak var configChannelNum: UILabel!
+    @IBOutlet weak var configStepper: UIStepper!
+    @IBOutlet weak var configSaveButton: UIButton!
+    // TV Outlets:
+    @IBOutlet weak var tvChannelNum: UILabel!
+    
+    @IBAction func stepper(_ sender: UIStepper)
     {
-        configChannelLabel.text = ""
-        configChannelLabel.text = String(Int(sender.value))
+        configChannelNum.text = String(Int(sender.value))
     }
     
-    
-    @IBAction func config(_ sender: AnyObject)
-    {
-        if sender.tag == 5
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item.tag == 20
         {
-            if labelTextField.text!.count > 0 && labelTextField.text!.count < 4
-            {
-                if configSegment.selectedSegmentIndex == 0
-                {
-                    tvSegment.setTitle(labelTextField.text, forSegmentAt: 0)
-                }
-                if configSegment.selectedSegmentIndex == 1
-                {
-                    tvSegment.setTitle(labelTextField.text, forSegmentAt: 1)
-                }
-                if configSegment.selectedSegmentIndex == 2
-                {
-                    tvSegment.setTitle(labelTextField.text, forSegmentAt: 2)
-                }
-                if configSegment.selectedSegmentIndex == 3
-                {
-                    tvSegment.setTitle(labelTextField.text, forSegmentAt: 3)
-                }
+            switch configSegmentOutlet.selectedSegmentIndex {
+            case 1:
+                segmentIndex = 0
+                break
+            case 2:
+                segmentIndex = 1
+                break
+            case 3:
+                segmentIndex = 2
+                break
+            case 4:
+                segmentIndex = 3
+                break
+            default:
+                print("No Segment Index Selected")
             }
-            if labelTextField.text!.count == 0 || labelTextField.text!.count > 4
+            
+            if configSegmentTitle.text!.count > 0 && configSegmentTitle.text!.count < 4
             {
-                let alert = UIAlertController(title: "Reminder", message: "Your label can't be empty or larger than 3 characters", preferredStyle: .alert)
+                channelName = configSegmentTitle.text!
+            }
+            else {
+                let alert = UIAlertController(title: "Reminder", message: "You can't type more than 3 letter", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
-            
-            tvCurrChannelTextField.text = configChannelLabel.text
+        }
+        if item.tag == 25
+        {
+            favoriteChannel.setTitle(channelName, forSegmentAt: segmentIndex)
         }
     }
-    
-    
-    
-    
 
+    
+    
+    @IBOutlet weak var testLabel: UILabel!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
