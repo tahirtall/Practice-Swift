@@ -7,41 +7,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--RIDDLE A DAY FOR A MONTH-->
         <scene sceneID="ODc-yI-drB">
             <objects>
-                <tableViewController id="9Lm-aV-rR2" sceneMemberID="viewController">
+                <tableViewController id="9Lm-aV-rR2" customClass="RiddleViewController" customModule="TahirUzun_Assignment8" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wmN-Ig-APw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="134" id="uZP-Nx-9Pm">
-                                <rect key="frame" x="0.0" y="28" width="414" height="134"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="30" reuseIdentifier="theRiddleCell" textLabel="FML-vi-N6d" detailTextLabel="1tD-ug-HRF" imageView="LbQ-Dk-nUk" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="uZP-Nx-9Pm">
+                                <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uZP-Nx-9Pm" id="lOg-vD-Y0i">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="134"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uZP-Nx-9Pm" id="lOg-vD-Y0i" customClass="Riddle">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-Xu-Ixu">
-                                            <rect key="frame" x="20" y="11" width="57" height="43"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FML-vi-N6d">
+                                            <rect key="frame" x="110" y="8.5" width="38" height="24"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1tD-ug-HRF">
+                                            <rect key="frame" x="110" y="36" width="81.5" height="27.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXy-Za-xN7">
-                                            <rect key="frame" x="20" y="69" width="57" height="43"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" image="Riddle-1" translatesAutoresizingMaskIntoConstraints="NO" id="LbQ-Dk-nUk">
+                                            <rect key="frame" x="20" y="0.0" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="5" leading="5" bottom="8" trailing="8"/>
+                                        </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="0wb-Xu-Ixu" firstAttribute="leading" secondItem="MXy-Za-xN7" secondAttribute="leading" id="DzG-8a-TpH"/>
-                                        <constraint firstItem="MXy-Za-xN7" firstAttribute="top" secondItem="0wb-Xu-Ixu" secondAttribute="bottom" constant="15" id="Me1-KR-vFF"/>
-                                        <constraint firstItem="0wb-Xu-Ixu" firstAttribute="top" secondItem="lOg-vD-Y0i" secondAttribute="topMargin" id="OUh-uD-0AN"/>
-                                        <constraint firstItem="0wb-Xu-Ixu" firstAttribute="leading" secondItem="lOg-vD-Y0i" secondAttribute="leadingMargin" id="VI6-99-VYf"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="smq-tj-dCf" kind="show" id="Rfw-hV-Ifx"/>
@@ -53,70 +54,75 @@
                             <outlet property="delegate" destination="9Lm-aV-rR2" id="RZO-ML-ShP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Gqb-1u-QEr"/>
+                    <navigationItem key="navigationItem" title="RIDDLE A DAY FOR A MONTH" id="Gqb-1u-QEr">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Mvl-9Z-M5a"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCc-DQ-9M7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-613.04347826086962" y="370.98214285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Riddle-->
         <scene sceneID="pqV-cf-HdM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7qI-4s-qBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="smq-tj-dCf" sceneMemberID="viewController">
+                <viewController id="smq-tj-dCf" customClass="AnswerViewController" customModule="TahirUzun_Assignment8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ecw-3j-K7j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZQ-ua-AYv">
-                                <rect key="frame" x="183" y="103" width="49" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZQ-ua-AYv">
+                                <rect key="frame" x="20" y="103" width="374" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="yea-Az-uEp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="weu-iX-uEf">
-                                <rect key="frame" x="20" y="191" width="374" height="205"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riddle:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4S-Bs-0QO">
-                                <rect key="frame" x="20" y="153" width="75" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbO-ap-cDE">
+                                <rect key="frame" x="20" y="155" width="374" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybE-eD-1tb">
-                                <rect key="frame" x="20" y="426" width="374" height="44"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybE-eD-1tb">
+                                <rect key="frame" x="20" y="204" width="374" height="44"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OZQ-PC-VB3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <state key="normal" title="Show Answer">
                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButton:" destination="smq-tj-dCf" eventType="touchUpInside" id="UhC-bb-8sO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="m4S-Bs-0QO" firstAttribute="leading" secondItem="weu-iX-uEf" secondAttribute="leading" id="0dI-AV-xW8"/>
-                            <constraint firstItem="m4S-Bs-0QO" firstAttribute="top" secondItem="wH4-R3-7At" secondAttribute="top" constant="65" id="0j2-BW-NKk"/>
-                            <constraint firstItem="weu-iX-uEf" firstAttribute="top" secondItem="m4S-Bs-0QO" secondAttribute="bottom" constant="8" id="5hF-ua-LEk"/>
-                            <constraint firstItem="ybE-eD-1tb" firstAttribute="top" secondItem="weu-iX-uEf" secondAttribute="bottom" constant="30" id="DkN-J3-ifP"/>
-                            <constraint firstItem="QZQ-ua-AYv" firstAttribute="centerX" secondItem="weu-iX-uEf" secondAttribute="centerX" id="E7X-C1-OLU"/>
-                            <constraint firstItem="QZQ-ua-AYv" firstAttribute="top" secondItem="wH4-R3-7At" secondAttribute="top" constant="15" id="MVk-vn-87A"/>
-                            <constraint firstItem="QZQ-ua-AYv" firstAttribute="leading" secondItem="wH4-R3-7At" secondAttribute="leading" constant="183" id="T5X-gH-2Jy"/>
-                            <constraint firstItem="weu-iX-uEf" firstAttribute="trailing" secondItem="ybE-eD-1tb" secondAttribute="trailing" id="dqd-Lm-ZDo"/>
-                            <constraint firstItem="weu-iX-uEf" firstAttribute="leading" secondItem="ybE-eD-1tb" secondAttribute="leading" id="jJG-1W-eSY"/>
-                            <constraint firstItem="weu-iX-uEf" firstAttribute="trailing" secondItem="ecw-3j-K7j" secondAttribute="trailingMargin" id="rqm-GR-UB8"/>
-                            <constraint firstItem="m4S-Bs-0QO" firstAttribute="leading" secondItem="ecw-3j-K7j" secondAttribute="leadingMargin" id="tBZ-py-hfv"/>
-                            <constraint firstItem="ybE-eD-1tb" firstAttribute="centerY" secondItem="ecw-3j-K7j" secondAttribute="centerY" id="y40-0A-fEI"/>
+                            <constraint firstItem="LbO-ap-cDE" firstAttribute="trailing" secondItem="ybE-eD-1tb" secondAttribute="trailing" id="0qZ-pe-dHD"/>
+                            <constraint firstItem="QZQ-ua-AYv" firstAttribute="trailing" secondItem="LbO-ap-cDE" secondAttribute="trailing" id="2tL-1S-KKU"/>
+                            <constraint firstItem="QZQ-ua-AYv" firstAttribute="top" secondItem="wH4-R3-7At" secondAttribute="top" constant="15" id="6Ir-hL-rcW"/>
+                            <constraint firstItem="QZQ-ua-AYv" firstAttribute="leading" secondItem="LbO-ap-cDE" secondAttribute="leading" id="Si9-yM-bQZ"/>
+                            <constraint firstItem="LbO-ap-cDE" firstAttribute="leading" secondItem="ybE-eD-1tb" secondAttribute="leading" id="V1b-Z2-Gfl"/>
+                            <constraint firstItem="QZQ-ua-AYv" firstAttribute="leading" secondItem="ecw-3j-K7j" secondAttribute="leadingMargin" id="cs5-td-aJ0"/>
+                            <constraint firstItem="ybE-eD-1tb" firstAttribute="top" secondItem="LbO-ap-cDE" secondAttribute="bottom" constant="21.5" id="e8l-T5-cZS"/>
+                            <constraint firstItem="QZQ-ua-AYv" firstAttribute="trailing" secondItem="ecw-3j-K7j" secondAttribute="trailingMargin" id="n9u-QZ-HON"/>
+                            <constraint firstItem="LbO-ap-cDE" firstAttribute="top" secondItem="QZQ-ua-AYv" secondAttribute="bottom" constant="20" id="nFi-yu-5n2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wH4-R3-7At"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Fu4-CJ-kj0"/>
+                    <navigationItem key="navigationItem" title="Riddle" id="Fu4-CJ-kj0"/>
+                    <connections>
+                        <outlet property="cellRiddleLabel" destination="LbO-ap-cDE" id="xAE-X7-8Ys"/>
+                        <outlet property="cellShowAnswerButton" destination="ybE-eD-1tb" id="Bfg-a4-vvz"/>
+                        <outlet property="cellTitleLabel" destination="QZQ-ua-AYv" id="8rl-nD-0rZ"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7qI-4s-qBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="227.536231884058" y="370.98214285714283"/>
         </scene>
@@ -137,4 +143,7 @@
             <point key="canvasLocation" x="-1601" y="371"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Riddle-1" width="512" height="512"/>
+    </resources>
 </document>
